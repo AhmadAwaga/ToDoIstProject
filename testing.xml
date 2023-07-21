@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite">
+    <test name="Chrome Test Case">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="LoginTests">
+                <methods>
+                    <include name="LoginWithInValidCredentials"></include>
+                    <include name="LoginWithValidCredentials"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Firefox Test Case">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="LoginTests">
+                <methods>
+                    <include name="LoginWithInValidCredentials"></include>
+                    <include name="LoginWithValidCredentials"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
